@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javas cript</title>
+    <style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BERANDA</h1>
+    </header>
+    <nav>
+        <a href="https://tik.ft.unm.ac.id">JTIK</a>
+        <a href="index.html">Home</a>
+        <a href="artikel.html">about me</a>
+        <a href="buku_tamu.html">buku tamu</a>
+        <a href="jadwal_mata_kuliah.html">mata kuliah</a>
+        <a href="Pendidikan.htm">pendidikan</a>
+        <a href="daftar_barang.html">daftar barang</a>
+        <a href="javascript.html">java scrip</aja>
+    </nav>
+    <h2>Menghitung Luas Persegi Panjang</h2>
+    <button onclick="hitungLuas()">Hitung Luas</button>
+    
+    <p id="luasPersegiPanjang"></p>
+    
+    <h2>Memeriksa Angka Positif, Negatif, atau Nol</h2>
+    <input type="number" id="angka" placeholder="Masukkan angka">
+    <button onclick="cekAngka()">Cek</button>
+    
+    <p id="hasilPengecekan"></p>
+    
+    <script>
+        function hitungLuas() {
+            var panjang = parseFloat(prompt("Masukkan panjang persegi panjang:"));
+            var lebar = parseFloat(prompt("Masukkan lebar persegi panjang:"));
+            var luas = panjang * lebar;
+            document.getElementById("luasPersegiPanjang").innerHTML = "Luas Persegi Panjang adalah: " + luas;
+        }
+    
+        function cekAngka() {
+            var angka = parseFloat(document.getElementById("angka").value);
+            var pesan = "";
+    
+            if (angka > 0) {
+                pesan = "Angka ini adalah positif.";
+            } else if (angka < 0) {
+                pesan = "Angka ini adalah negatif.";
+            } else {
+                pesan = "Angka ini adalah nol.";
+            }
+    
+            document.getElementById("hasilPengecekan").innerHTML = pesan;
+        }
+    </script>
+
